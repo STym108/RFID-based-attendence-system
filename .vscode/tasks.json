@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "PlatformIO: Build",
+            "command": "pio run",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:/Users/satyam/.platformio/penv/bin"
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PlatformIO: Upload",
+            "command": "pio run --target upload",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:/Users/satyam/.platformio/penv/bin"
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PlatformIO: Serial Monitor",
+            "command": "pio device monitor",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:/Users/satyam/.platformio/penv/bin"
+                }
+            },
+            "presentation": {
+                "focus": true,
+                "panel": "new"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PlatformIO: Upload and Monitor",
+            "command": "pio run --target upload && pio device monitor",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:/Users/satyam/.platformio/penv/bin"
+                }
+            },
+            "presentation": {
+                "focus": true,
+                "panel": "new"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "RFID: Run Attendance Dashboard & Excel Sync",
+            "command": "/Users/satyam/.platformio/penv/bin/python attendance_dashboard.py",
+            "problemMatcher": [],
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:/Users/satyam/.platformio/penv/bin"
+                }
+            },
+            "presentation": {
+                "focus": true,
+                "panel": "new"
+            }
+        }
+    ]
+}
+
